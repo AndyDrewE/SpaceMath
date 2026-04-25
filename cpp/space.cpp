@@ -1,5 +1,8 @@
+using namespace std;
+
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 struct Vec3{
     double x,y,z;
@@ -17,6 +20,16 @@ struct Vec3{
     }
 
     double norm(const Vec3& vector){
-        return std::sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
+        return sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
     }
 };
+
+struct Body{
+    Vec3 position;
+    Vec3 velocity;
+    double mass;
+};
+
+vector<Vec3> compute_accelerations(const vector<Body>& bodies, double G){
+    
+}
